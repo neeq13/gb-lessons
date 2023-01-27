@@ -26,11 +26,15 @@ print(f'Петя и Серёжа, каждый сделал по {j // 6}')
 # 385916 -> yes
 # 123456 -> no
 print("Задача 3:")
-tiket = input('tiket = ')
-lucky = 0
-for i in tiket:
-    lucky += int(i)
-if lucky % 2 == 0:
+tiсket = int(input('tiсket = '))
+left = 0
+right = 0
+for i in range(6):
+    if i < 3:
+        right += tiсket // 10**i % 10
+    else:
+        left += tiсket // 10**i % 10
+if right == left:
     print('lucky')
 else:
     print('don\'t lucky')
