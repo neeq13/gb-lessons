@@ -52,6 +52,8 @@ for i in a:
             temp_2 = i
 if char - temp_1 < temp_2 - char:
     print(temp_1)
+elif char - temp_1 == temp_2 - char:
+    print(temp_1, temp_2)
 else:
     print(temp_2)
 
