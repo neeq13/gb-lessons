@@ -44,11 +44,11 @@ print(sorted(list_3))
 print('Задача 2:')
 row = int(input('Задайте количество кустов = '))
 berries = []
-max = 0
+maxim = []
 for i in range(row):
     berries.append(random.randint(0, 10))
-for i in range(1, row - 1):
-    if berries[i - 1] + berries[i] + berries[i + 1] > max:
-        max = berries[i - 1] + berries[i] + berries[i + 1]
+for i in range(row - 1):
+        maxim.append(berries[i - 1] + berries[i] + berries[i + 1])
+maxim.append(berries[-2] + berries[-1] + berries[0])
 print(berries)
-print(max)
+print(max(maxim))
