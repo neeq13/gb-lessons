@@ -55,13 +55,11 @@ else:
 # 6 12 18 24 30 36 |
 print('Задача 2:')
 def print_operation_table(operation, num_rows=6, num_columns=6):
-    print(end='  ')
-    for i in range(num_columns):
-        print(i + 1, end=' ')
-    for i in range(1, num_rows + 1):
+    print('	'.join([str(i) for i in range(1, num_columns + 1)]))
+    for i in range(2, num_rows + 1):
+        print(i, end='	')
+        for j in range(2, num_columns + 1):
+            print(operation(i, j), end='	')
         print()
-        print(i, end=' ')
-        for j in range(1, num_columns + 1):
-            print(operation(i, j), end=' ')
 
-print_operation_table(lambda x, y: x * y, 3, 7)
+print_operation_table(lambda x, y: x * y, 7, 7)
